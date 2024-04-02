@@ -18,7 +18,12 @@ return {
     },
   },
   config = function()
-    require('neo-tree').setup {}
+    require('neo-tree').setup {
+      source_selector = {
+        winbar = true,
+        statusline = false,
+      },
+    }
     vim.keymap.set('n', '<C-n>', '<CMD>Neotree toggle<CR>', {})
   end,
 }
