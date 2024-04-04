@@ -154,6 +154,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- include hyphens in words
+vim.opt.iskeyword:append '-'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -738,16 +741,17 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'folke/tokyonight.nvim',
-    -- 'mhartington/oceanic-next',
+    'mhartington/oceanic-next',
     -- 'santos-gabriel-dario/darcula-solid.nvim',
-    'xiantang/darcula-dark.nvim',
+    -- 'xiantang/darcula-dark.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'darcula-solid'
-      vim.cmd.colorscheme 'darcula-dark'
+      vim.cmd.colorscheme 'OceanicNext'
+      -- vim.cmd.colorscheme 'darcula-dark'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
